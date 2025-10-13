@@ -192,8 +192,7 @@ Aqui estão algumas capturas de tela mostrando o layout do site em **versão des
 
 ## 🧾 Créditos e Licença
 
-Criado com 💙 por **Debuguei Studio**  
-Design, estrutura e interação por *GPT-5 + direção criativa Debuguei*.  
+Criado com 💙 por **Debuguei**  
 Uso livre e personalizável para catálogos institucionais.
 
 © 2025 — **Refrigeração Profissional**. Todos os direitos reservados.  
