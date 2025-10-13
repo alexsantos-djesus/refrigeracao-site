@@ -175,21 +175,18 @@ Alt + L + O
 
 ---
 
-## 🖼️ Prints do Projeto
+## 📸 Pré-visualizações do Projeto
 
-> Adicione suas imagens dentro de `docs/screenshots/`:
->
-> ```
-> docs/screenshots/01-hero.png
-> docs/screenshots/02-servicos.png
-> docs/screenshots/03-menu-mobile.png
-> ```
->
-> E insira aqui:
->
-> ![Hero](docs/screenshots/01-hero.png)
-> ![Serviços](docs/screenshots/02-servicos.png)
-> ![Menu Mobile](docs/screenshots/03-menu-mobile.png)
+Aqui estão algumas capturas de tela mostrando o layout do site em **versão desktop e mobile**.
+
+| 💻 Versão Desktop | 📱 Versão Mobile |
+|-------------------|-----------------|
+| ![Header](assets/img/screenshots/header.png) | ![Header Mobile](assets/img/screenshots/header-mobile.png) |
+| ![Serviços](assets/img/screenshots/servicos.png) | ![Serviços Mobile](assets/img/screenshots/servicos-mobile.png) |
+| ![Sobre Nós](assets/img/screenshots/sobre-nos.png) | ![Sobre Nós Mobile](assets/img/screenshots/sobre-nos-mobile.png) |
+| ![Fale com a Equipe](assets/img/screenshots/fale-com-a-equipe.png) | ![Fale com a Equipe Mobile](assets/img/screenshots/fale-com-a-equipe-mobile.png) |
+
+> As capturas acima demonstram a responsividade e o design limpo do catálogo, com foco em conversão via WhatsApp e visual profissional para serviços de refrigeração.
 
 ---
 
