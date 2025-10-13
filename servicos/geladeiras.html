@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Geladeiras - Refrigeração Profissional</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../assets/css/style.css"/>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
+<header class="w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-50 shadow-sm sticky top-0">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="../index.html" class="flex items-center gap-3"><img src="../assets/icons/snowflake.svg" class="w-8 h-8" alt="Logo"/><span class="text-2xl font-bold text-primary">Refrigeração Profissional</span></a>
+    <a href="../index.html#contato" class="bg-primary text-white px-4 py-2 rounded-lg">Orçamento</a>
+  </nav>
+</header>
+
+<section class="relative overflow-hidden">
+  <img src="../assets/img/servicos/geladeira.jpg" alt="Geladeiras" class="absolute inset-0 w-full h-full object-cover"/>
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="container mx-auto px-4 py-24 relative z-10">
+    <nav class="text-sm mb-4 text-white/80"><a href="../index.html" class="hover:underline">Início</a> / <span>Serviços</span> / <span class="font-semibold">Geladeiras</span></nav>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-3">Geladeiras</h1>
+    <p class="text-white/90 max-w-2xl">Reparo e manutenção de refrigeradores e freezers.</p>
+    <div class="mt-6">
+      <a href="https://wa.me/5551999999999?text=Olá!%20Quero%20um%20orçamento%20para%20Geladeiras."
+         class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+        <img src="../assets/icons/whatsapp.svg" class="w-6 h-6" alt="WhatsApp"/> Solicitar orçamento no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<main class="container mx-auto px-4 py-14">
+  <section class="grid md:grid-cols-3 gap-6 mb-10">
+    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Cobertura</p><p class="text-lg font-semibold">Porto Alegre e Região Metropolitana</p></div>
+    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Prazo</p><p class="text-lg font-semibold">Atendimento 24h, inclusive finais de semana</p></div>
+    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Garantia</p><p class="text-lg font-semibold">Peças originais e garantia de serviço</p></div>
+  </section>
+
+  <section class="grid lg:grid-cols-3 gap-10 items-start">
+    <article class="lg:col-span-2 space-y-6">
+      <h2 class="text-2xl font-bold">O que está incluído</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Diagnóstico completo com laudo do problema</li>
+        <li>Substituição com peças originais quando necessário</li>
+        <li>Testes finais e orientações de uso</li>
+        <li>Garantia em todos os serviços realizados</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8">Galeria de serviços</h3>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <img src="../assets/img/servicos/geladeira.svg" alt="Geladeiras foto 1" class="rounded-xl shadow"/>
+        <img src="../assets/img/servicos/geladeira.svg" alt="Geladeiras foto 2" class="rounded-xl shadow"/>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-8">Perguntas frequentes</h3>
+      <div class="space-y-3" id="faq">
+        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
+          <summary class="font-semibold cursor-pointer">Quanto tempo leva o atendimento?</summary>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Normalmente no mesmo dia para Porto Alegre. Para cidades da região metropolitana, consulte a janela de horários.</p>
+        </details>
+        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
+          <summary class="font-semibold cursor-pointer">Vocês fornecem garantia?</summary>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Sim, serviços com garantia escrita e peças originais com nota.</p>
+        </details>
+        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
+          <summary class="font-semibold cursor-pointer">Quais formas de pagamento?</summary>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Pix, débito, crédito (parcelamos) e dinheiro.</p>
+        </details>
+      </div>
+    </article>
+
+    <aside class="lg:col-span-1">
+      <div class="rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-xl ring-1 ring-black/5 sticky top-24">
+        <h4 class="text-xl font-semibold mb-2">Fale agora no WhatsApp</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Envie fotos do aparelho e receba um orçamento rápido.</p>
+        <a href="https://wa.me/5551999999999?text=Olá!%20Quero%20um%20orçamento%20para%20Geladeiras."
+           class="w-full inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-xl shadow">
+          <img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt="WhatsApp"/> WhatsApp
+        </a>
+        <ul class="mt-6 text-sm space-y-2 text-gray-600 dark:text-gray-300">
+          <li>⏱️ Resposta média: minutos</li>
+          <li>🧾 NF e garantia</li>
+          <li>📍 Porto Alegre e região</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="bg-gray-100 dark:bg-gray-800 py-10"><div class="container mx-auto px-4 text-sm">© <span id="year"></span> Refrigeração Profissional.</div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

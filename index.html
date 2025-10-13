@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Refrigeração Profissional - Assistência Técnica em Porto Alegre</title>
+<meta name="description" content="Assistência técnica e manutenção de geladeiras, lavadoras, micro-ondas e ar-condicionado em Porto Alegre e região. Atendimento 24h com peças originais."/>
+<meta name="keywords" content="refrigeração Porto Alegre, assistência técnica ar-condicionado, manutenção eletrodomésticos"/>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Refrigeração Profissional",
+  "address":{"@type":"PostalAddress","addressLocality":"Porto Alegre","addressRegion":"RS","addressCountry":"BR"},
+  "telephone":"+55 51 99999-9999",
+  "url":"https://www.refrigeracaoprofissional.com"
+}
+</script>
+
+<!-- Fonts + Tailwind -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0ea5e9",
+        secondary: "#14b8a6",
+        surface: { soft:  "#eef2f6", ring:  "#e2e8f0" },
+        cream: { DEFAULT: "#FFF4DC", soft: "#FFF9EF", bold: "#FFE8B3" }
+      },
+      boxShadow: {
+        soft: "0 10px 30px -12px rgba(2, 6, 23, .18)",
+        glow: "0 12px 45px -12px rgba(14,165,233,.45)"
+      }
+    }
+  }
+}
+</script>
+
+<!-- AOS + seu CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="assets/css/style.css"/>
+
+<!-- Favicons (novo) -->
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<meta name="theme-color" content="#0ea5e9"/>
+</head>
+
+<body class="bg-white text-slate-900 font-sans" style="scroll-behavior:smooth">
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
+  <nav class="container mx-auto px-4">
+    <div class="flex h-16 items-center justify-between">
+      <!-- brand: 1 logo + nome -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="assets/logo/refrigpro-wordmark.svg" alt="Refrigeração Profissional" class="h-8 w-auto"/>
+      </a>
+
+      <!-- desktop nav -->
+      <ul class="hidden md:flex items-center gap-1">
+        <li><a href="#servicos" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Serviços</a></li>
+        <li><a href="sobre.html"  class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Sobre</a></li>
+        <li><a href="#contato"   class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Contato</a></li>
+      </ul>
+
+      <!-- ações -->
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20um%20orçamento."
+           class="hidden md:inline-flex items-center gap-2 px-4 h-10 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-sm">
+          <img src="assets/icons/whatsapp.svg" alt="" class="w-5 h-5"> WhatsApp
+        </a>
+
+        <!-- hambúrguer -->
+        <button id="openMenu"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-black/5 hover:bg-black/5 transition"
+          aria-label="Abrir menu" aria-expanded="false">
+          <!-- ícone hambúrguer -->
+          <svg id="iconBurger" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <!-- ícone fechar (escondido até abrir) -->
+          <svg id="iconClose" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 6l12 12M18 6l-12 12" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-surface-soft to-white"></div>
+  <div class="absolute inset-0 opacity-[.08] mix-blend-multiply"
+       style="background-image: radial-gradient(ellipse at 20% 10%, #0ea5e9 0, transparent 35%), radial-gradient(ellipse at 80% 0%, #14b8a6 0, transparent 30%);"></div>
+
+  <div class="container mx-auto grid md:grid-cols-2 items-center gap-10 px-6 py-24 relative z-10">
+    <div class="md:pr-8" data-aos="fade-right">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm bg-primary/10 text-primary font-medium">
+        ✓ Atendimento 24h • Porto Alegre
+      </span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+        Assistência técnica de confiança, rápida e garantida
+      </h1>
+      <p class="mt-4 text-lg text-slate-600">
+        Geladeiras, lavadoras, micro-ondas e ar-condicionado com equipe certificada, peças originais e garantia.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="https://wa.me/5551999999999?text=Olá!%20Preciso%20de%20assistência%20técnica."
+           class="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-green-500 text-white font-semibold shadow-glow hover:-translate-y-[2px] transition">
+          <img src="assets/icons/whatsapp.svg" alt="" class="w-6 h-6"> Chamar no WhatsApp
+        </a>
+        <a href="#servicos"
+           class="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-surface-ring text-slate-700 hover:bg-white/60 transition">Ver serviços →</a>
+      </div>
+      <ul class="mt-6 space-y-2 text-sm text-slate-600">
+        <li>• Atendimento 24h (inclui finais de semana)</li>
+        <li>• Peças originais e garantia</li>
+        <li>• Parcelamento em até 12x</li>
+      </ul>
+    </div>
+    <div class="relative" data-aos="fade-left">
+      <div class="absolute -inset-6 rounded-[3rem] bg-gradient-to-tr from-primary/20 to-secondary/20 blur-2xl"></div>
+      <img src="assets/img/banner.png" alt="Técnico em atendimento"
+           class="relative rounded-[2rem] shadow-soft ring-1 ring-surface-ring/60 object-cover w-full h-full" />
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="relative py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-sky-50 via-surface-soft to-white"></div>
+  <div class="absolute inset-0 opacity-10" style="background-image:url('assets/img/pattern-dark.png'); background-size:cover; background-position:center;"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-14 text-slate-900">Nossos Serviços</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <article class="glass rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
+        <div class="overflow-hidden">
+          <img src="assets/img/geladeira.jpg" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-slate-900">Geladeiras</h4>
+          <p class="mt-2 text-slate-600">Reparos e manutenção com peças originais.</p>
+          <a href="servicos/geladeiras.html" class="mt-4 inline-block text-primary font-semibold hover:underline">Saiba Mais →</a>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
+        <div class="overflow-hidden">
+          <img src="assets/img/lavadora.jpg" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-slate-900">Lavadoras</h4>
+          <p class="mt-2 text-slate-600">Assistência completa para seu lar.</p>
+          <a href="servicos/lavadoras.html" class="mt-4 inline-block text-primary font-semibold hover:underline">Saiba Mais →</a>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
+        <div class="overflow-hidden">
+          <img src="assets/img/microondas.jpg" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-slate-900">Micro-ondas</h4>
+          <p class="mt-2 text-slate-600">Diagnóstico rápido e eficiente.</p>
+          <a href="servicos/micro-ondas.html" class="mt-4 inline-block text-primary font-semibold hover:underline">Saiba Mais →</a>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
+        <div class="overflow-hidden">
+          <img src="assets/img/ar-condicionado.jpg" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110" alt="">
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-slate-900">Ar-Condicionado</h4>
+          <p class="mt-2 text-slate-600">Instalações e reparos especializados.</p>
+          <a href="servicos/ar-condicionado.html" class="mt-4 inline-block text-primary font-semibold hover:underline">Saiba Mais →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE ESCOLHER -->
+<section class="py-20">
+  <div class="container mx-auto px-4">
+    <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-14 text-slate-900">Por que escolher a gente?</h3>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="text-center group">
+        <div class="w-16 h-16 mx-auto rounded-full bg-secondary shadow-[0_0_0_0_rgba(20,184,166,0.6)] group-hover:shadow-[0_0_0_12px_rgba(20,184,166,0.15)] transition-all grid place-items-center text-white">✓</div>
+        <h4 class="mt-4 text-xl font-semibold text-slate-900">Atendimento 24h</h4>
+        <p class="text-slate-600">Disponíveis a qualquer hora.</p>
+      </div>
+      <div class="text-center group">
+        <div class="w-16 h-16 mx-auto rounded-full bg-primary shadow-[0_0_0_0_rgba(14,165,233,0.6)] group-hover:shadow-[0_0_0_12px_rgba(14,165,233,0.18)] transition-all grid place-items-center text-white">👨‍🔧</div>
+        <h4 class="mt-4 text-xl font-semibold text-slate-900">Equipe Certificada</h4>
+        <p class="text-slate-600">Técnicos qualificados e experientes.</p>
+      </div>
+      <div class="text-center group">
+        <div class="w-16 h-16 mx-auto rounded-full bg-secondary shadow-[0_0_0_0_rgba(20,184,166,0.6)] group-hover:shadow-[0_0_0_12px_rgba(20,184,166,0.15)] transition-all grid place-items-center text-white">🧰</div>
+        <h4 class="mt-4 text-xl font-semibold text-slate-900">Peças Originais</h4>
+        <p class="text-slate-600">Qualidade e garantia.</p>
+      </div>
+      <div class="text-center group">
+        <div class="w-16 h-16 mx-auto rounded-full bg-primary shadow-[0_0_0_0_rgba(14,165,233,0.6)] group-hover:shadow-[0_0_0_12px_rgba(14,165,233,0.18)] transition-all grid place-items-center text-white">📝</div>
+        <h4 class="mt-4 text-xl font-semibold text-slate-900">Orçamento Gratuito</h4>
+        <p class="text-slate-600">Sem compromisso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="relative py-20">
+  <div class="absolute inset-0 bg-gradient-to-b from-sky-50 via-white to-surface-soft"></div>
+  <div class="absolute inset-0 opacity-10" style="background-image:url('assets/img/pattern-dark.png');background-size:cover;background-position:center"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-slate-900" data-aos="fade-up">
+      O Que Nossos Clientes Dizem
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <article class="group rounded-2xl p-6 backdrop-blur-md bg-white/80 ring-1 ring-surface-ring shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_50px_-18px_rgba(14,165,233,.45)] hover:ring-sky-400/50" data-aos="fade-up" data-aos-delay="100">
+        <p class="italic mb-4 text-slate-700 group-hover:text-slate-900 transition-colors">"Atendimento rápido e eficiente! Meu ar-condicionado voltou a funcionar em horas."</p>
+        <p class="font-semibold text-primary group-hover:text-sky-500 transition-colors">— João Silva, Porto Alegre</p>
+      </article>
+      <article class="group rounded-2xl p-6 backdrop-blur-md bg-white/80 ring-1 ring-surface-ring shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_50px_-18px_rgba(14,165,233,.45)] hover:ring-sky-400/50" data-aos="fade-up" data-aos-delay="200">
+        <p class="italic mb-4 text-slate-700 group-hover:text-slate-900 transition-colors">"Peças originais e equipe certificada. Recomendo!"</p>
+        <p class="font-semibold text-primary group-hover:text-sky-500 transition-colors">— Maria Oliveira, Região Metropolitana</p>
+      </article>
+      <article class="group rounded-2xl p-6 backdrop-blur-md bg-white/80 ring-1 ring-surface-ring shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_50px_-18px_rgba(14,165,233,.45)] hover:ring-sky-400/50" data-aos="fade-up" data-aos-delay="300">
+        <p class="italic mb-4 text-slate-700 group-hover:text-slate-900 transition-colors">"Orçamento gratuito e serviço 24h salvou meu fim de semana."</p>
+        <p class="font-semibold text-primary group-hover:text-sky-500 transition-colors">— Pedro Santos, Porto Alegre</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h3 class="text-4xl md:text-5xl font-extrabold tracking-tight">Fale direto com a equipe</h3>
+      <p class="text-slate-600 mt-3">Orçamento rápido e sem burocracia. Atendimento 24h em Porto Alegre e região.</p>
+    </div>
+    <div class="flex justify-center mb-12">
+      <a href="https://wa.me/5551999999999?text=Olá!%20Quero%20um%20orçamento."
+         class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg shadow-lg transition-transform hover:scale-105">
+        <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-7 h-7"> Falar no WhatsApp
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+      <div class="rounded-2xl bg-slate-50 px-5 py-4 text-center shadow-sm">
+        <p class="text-sm text-slate-500">Atendimento</p><p class="font-semibold">24h / 7 dias</p>
+      </div>
+      <div class="rounded-2xl bg-slate-50 px-5 py-4 text-center shadow-sm">
+        <p class="text-sm text-slate-500">Serviço com</p><p class="font-semibold">Peças originais</p>
+      </div>
+      <div class="rounded-2xl bg-slate-50 px-5 py-4 text-center shadow-sm">
+        <p class="text-sm text-slate-500">Garantia</p><p class="font-semibold">em todos os reparos</p>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div class="rounded-2xl bg-slate-50 p-6 shadow-lg">
+        <h4 class="text-xl font-semibold mb-4">Informações</h4>
+        <ul class="space-y-3 text-slate-700">
+          <li class="flex gap-3"><span>📍</span><span>Porto Alegre – RS</span></li>
+          <li class="flex gap-3"><span>📞</span><a href="tel:+5551999999999" class="text-primary hover:underline">(51) 99999-9999</a></li>
+          <li class="flex gap-3"><span>✉️</span><a href="mailto:contato@refrigeracaoprofissional.com" class="text-primary hover:underline">contato@refrigeracaoprofissional.com</a></li>
+          <li class="flex gap-3"><span>⏱️</span><span>Resposta média: <strong>minutos</strong> via WhatsApp</span></li>
+        </ul>
+        <div class="mt-6 text-sm text-slate-500">Preferimos WhatsApp pra agilizar fotos do aparelho e fechar o orçamento na hora.</div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+        <iframe title="Mapa" class="w-full h-[320px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Porto%20Alegre%20RS&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER DIFERENCIADO -->
+<footer class="relative bg-[#f1f5f9] text-slate-700 py-10 border-t border-slate-200 shadow-inner">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+    <p class="text-sm">
+      © <span id="year"></span>
+      <span class="font-semibold text-slate-900">Refrigeração Profissional</span>.
+      Todos os direitos reservados.
+    </p>
+
+    <div class="flex items-center gap-6">
+      <a href="#contato" class="hover:text-primary font-medium transition-colors">Contato</a>
+      <a href="https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20um%20orçamento."
+         class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium shadow-md hover:-translate-y-[2px] transition">
+        <img src="assets/icons/whatsapp.svg" class="w-5 h-5" alt="">
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- FAB Whats -->
+<a href="https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20um%20orçamento."
+   class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg"
+   aria-label="WhatsApp">
+  <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-7 h-7"/>
+</a>
+
+<script src="assets/js/main.js"></script>
+
+<!-- Drawer Mobile -->
+  <div id="mobileDrawer" class="fixed inset-0 z-[70] hidden">
+    <!-- overlay opaco -->
+    <button id="drawerOverlay" class="absolute inset-0 bg-black/60"></button>
+
+    <!-- painel -->
+    <aside
+      id="drawerPanel"
+      class="ml-auto h-full w-[88%] max-w-sm bg-white shadow-2xl ring-1 ring-black/10
+            transition-transform duration-300 will-change-transform">
+      <div class="flex items-center justify-between px-6 h-16 border-b border-slate-200">
+        <div class="flex items-center gap-2 font-semibold text-slate-700">
+          <img src="assets/logo/refrigpro-icon.svg" class="w-6 h-6" alt="">
+          Menu
+        </div>
+        <button id="closeMenu" class="w-10 h-10 grid place-items-center rounded-lg hover:bg-slate-100">
+          ✕
+        </button>
+      </div>
+
+      <nav class="p-4 flex flex-col gap-2 text-lg">
+        <a href="#servicos" class="px-3 py-3 rounded-xl hover:bg-slate-100">Serviços</a>
+        <a href="sobre.html" class="px-3 py-3 rounded-xl hover:bg-slate-100">Sobre</a>
+        <a href="#contato" class="px-3 py-3 rounded-xl hover:bg-slate-100">Contato</a>
+      </nav>
+
+      <div class="mt-auto p-4">
+        <a href="https://wa.me/5551999999999?text=Olá!%20Gostaria%20de%20um%20orçamento."
+          class="w-full inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-sm transition">
+          <img src="assets/icons/whatsapp.svg" class="w-5 h-5" alt=""> Falar no WhatsApp
+        </a>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

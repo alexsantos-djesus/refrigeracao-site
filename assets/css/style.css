@@ -1,0 +1,9 @@
+.glass{
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(253, 244, 219, .9); /* ring puxando pro creme */
+}
+
+#drawerPanel { transform: translateX(100%); }
+#drawerPanel[data-open="true"] { transform: translateX(0); }
