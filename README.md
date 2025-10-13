@@ -93,20 +93,13 @@ tailwind.config = {
 ```
 Altere esses hexadecimais para ajustar o visual.
 
-### 3) Logos e favicon
-- **Logo (wordmark)**: `assets/logo/refrigpro-wordmark.svg`
-- **Ícone (quadrado)**: `assets/logo/refrigpro-icon.svg`
-- **Favicon**: `assets/logo/favicon.svg` (link já está no `<head>`)
-
-Se trocar os arquivos, **mantenha os nomes** ou atualize os caminhos em `index.html`.
-
-### 4) Textos de SEO e Schema
+### 3) Textos de SEO e Schema
 No `<head>` do `index.html` há:
 - `<title>` e `<meta name="description">`
 - JSON‑LD com `@type: LocalBusiness`  
 Atualize **nome, telefone, cidade** e **URL**.
 
-### 5) Serviços
+### 4) Serviços
 As páginas em `/servicos` possuem o conteúdo por aparelho. Altere conforme a sua oferta.
 
 ---
