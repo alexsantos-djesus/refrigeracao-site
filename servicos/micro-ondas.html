@@ -3,28 +3,60 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Micro-ondas - Refrigeração Profissional</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="../assets/css/style.css"/>
+<script>tailwind.config={theme:{extend:{colors:{primary:"#0ea5e9",secondary:"#14b8a6",surface:{soft:"#eef2f6",ring:"#e2e8f0"}},boxShadow:{soft:"0 10px 30px -12px rgba(2,6,23,.18)",glow:"0 12px 45px -12px rgba(14,165,233,.45)"}}}}</script>
+<link rel="stylesheet" href="../assets/css/style.css"/><link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg"/>
 </head>
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
-<header class="w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-50 shadow-sm sticky top-0">
-  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="../index.html" class="flex items-center gap-3"><img src="../assets/icons/snowflake.svg" class="w-8 h-8" alt="Logo"/><span class="text-2xl font-bold text-primary">Refrigeração Profissional</span></a>
-    <a href="../index.html#contato" class="bg-primary text-white px-4 py-2 rounded-lg">Orçamento</a>
+<body class="bg-white text-slate-900 font-sans" style="scroll-behavior:smooth">
+
+<!-- header igual -->
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-black/5">
+  <nav class="container mx-auto px-4">
+    <div class="flex h-16 items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3"><img src="../assets/logo/refrigpro-wordmark.svg" class="h-8 w-auto" alt=""></a>
+      <ul class="hidden md:flex items-center gap-1">
+        <li><a href="../index.html#servicos" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Serviços</a></li>
+        <li><a href="../sobre.html" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Sobre</a></li>
+        <li><a href="../index.html#contato" class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-primary hover:bg-primary/10">Contato</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/5551999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." class="hidden md:inline-flex items-center gap-2 px-4 h-10 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-sm"><img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt=""> WhatsApp</a>
+        <button id="openMenu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-black/5 hover:bg-black/5" aria-label="Abrir menu" aria-expanded="false">
+          <svg id="iconBurger" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg id="iconClose" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 6l12 12M18 6l-12 12" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
   </nav>
+  <div id="mobileDrawer" class="fixed inset-0 z-[70] hidden">
+    <button id="drawerOverlay" class="absolute inset-0 bg-black/60"></button>
+    <aside id="drawerPanel" class="ml-auto h-full w-[88%] max-w-sm bg-white shadow-2xl ring-1 ring-black/10 transition-transform duration-300 will-change-transform" style="transform:translateX(100%)">
+      <div class="flex items-center justify-between px-6 h-16 border-b border-slate-200">
+        <div class="flex items-center gap-2 font-semibold text-slate-700"><img src="../assets/logo/refrigpro-icon.svg" class="w-6 h-6" alt=""> Menu</div>
+        <button id="closeMenu" class="w-10 h-10 grid place-items-center rounded-lg hover:bg-slate-100">✕</button>
+      </div>
+      <nav class="p-4 flex flex-col gap-2 text-lg">
+        <a href="../index.html#servicos" class="px-3 py-3 rounded-xl hover:bg-slate-100">Serviços</a>
+        <a href="../sobre.html" class="px-3 py-3 rounded-xl hover:bg-slate-100">Sobre</a>
+        <a href="../index.html#contato" class="px-3 py-3 rounded-xl hover:bg-slate-100">Contato</a>
+      </nav>
+      <div class="mt-auto p-4">
+        <a href="https://wa.me/5551999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." class="w-full inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-sm"><img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt=""> Falar no WhatsApp</a>
+      </div>
+    </aside>
+  </div>
 </header>
 
 <section class="relative overflow-hidden">
   <img src="../assets/img/servicos/micro-ondas.webp" alt="Micro-ondas" class="absolute inset-0 w-full h-full object-cover"/>
-  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/30"></div>
   <div class="container mx-auto px-4 py-24 relative z-10">
-    <nav class="text-sm mb-4 text-white/80"><a href="../index.html" class="hover:underline">Início</a> / <span>Serviços</span> / <span class="font-semibold">Micro-ondas</span></nav>
+    <nav class="text-sm mb-4 text-white/90"><a href="../index.html" class="underline-offset-4 hover:underline">Início</a> / <span>Serviços</span> / <span class="font-semibold">Micro-ondas</span></nav>
     <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-3">Micro-ondas</h1>
-    <p class="text-white/90 max-w-2xl">Conserto e ajustes em micro-ondas domésticos.</p>
+    <p class="text-white/95 max-w-2xl">Conserto e ajustes em micro-ondas domésticos.</p>
     <div class="mt-6">
-      <a href="https://wa.me/5551999999999?text=Olá!%20Quero%20um%20orçamento%20para%20Micro-ondas."
-         class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+      <a href="https://wa.me/5551999999999?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20Micro-ondas." class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg">
         <img src="../assets/icons/whatsapp.svg" class="w-6 h-6" alt="WhatsApp"/> Solicitar orçamento no WhatsApp
       </a>
     </div>
@@ -33,9 +65,9 @@
 
 <main class="container mx-auto px-4 py-14">
   <section class="grid md:grid-cols-3 gap-6 mb-10">
-    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Cobertura</p><p class="text-lg font-semibold">Porto Alegre e Região Metropolitana</p></div>
-    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Prazo</p><p class="text-lg font-semibold">Atendimento 24h, inclusive finais de semana</p></div>
-    <div class="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800/60 shadow"><p class="text-sm text-gray-500">Garantia</p><p class="text-lg font-semibold">Peças originais e garantia de serviço</p></div>
+    <div class="p-6 rounded-2xl bg-slate-50 shadow"><p class="text-sm text-slate-500">Cobertura</p><p class="text-lg font-semibold">Porto Alegre e Região Metropolitana</p></div>
+    <div class="p-6 rounded-2xl bg-slate-50 shadow"><p class="text-sm text-slate-500">Prazo</p><p class="text-lg font-semibold">Atendimento 24h, inclusive finais de semana</p></div>
+    <div class="p-6 rounded-2xl bg-slate-50 shadow"><p class="text-sm text-slate-500">Garantia</p><p class="text-lg font-semibold">Peças originais e garantia de serviço</p></div>
   </section>
 
   <section class="grid lg:grid-cols-3 gap-10 items-start">
@@ -50,46 +82,41 @@
 
       <h3 class="text-xl font-semibold mt-8">Galeria de serviços</h3>
       <div class="grid sm:grid-cols-2 gap-4">
-        <img src="../assets/img/servicos/micro-ondas.svg" alt="Micro-ondas foto 1" class="rounded-xl shadow"/>
-        <img src="../assets/img/servicos/micro-ondas.svg" alt="Micro-ondas foto 2" class="rounded-xl shadow"/>
+        <img src="../assets/img/servicos/micro-ondas.svg" alt="Micro-ondas 1" class="rounded-xl shadow"/>
+        <img src="../assets/img/servicos/micro-ondas.svg" alt="Micro-ondas 2" class="rounded-xl shadow"/>
       </div>
 
       <h3 class="text-xl font-semibold mt-8">Perguntas frequentes</h3>
       <div class="space-y-3" id="faq">
-        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
-          <summary class="font-semibold cursor-pointer">Quanto tempo leva o atendimento?</summary>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Normalmente no mesmo dia para Porto Alegre. Para cidades da região metropolitana, consulte a janela de horários.</p>
-        </details>
-        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
-          <summary class="font-semibold cursor-pointer">Vocês fornecem garantia?</summary>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Sim, serviços com garantia escrita e peças originais com nota.</p>
-        </details>
-        <details class="group rounded-xl bg-gray-50 dark:bg-gray-800/60 p-4">
-          <summary class="font-semibold cursor-pointer">Quais formas de pagamento?</summary>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Pix, débito, crédito (parcelamos) e dinheiro.</p>
-        </details>
+        <details class="group rounded-xl bg-slate-50 p-4"><summary class="font-semibold cursor-pointer">Quanto tempo leva o atendimento?</summary><p class="mt-2 text-sm text-slate-600">Normalmente no mesmo dia…</p></details>
+        <details class="group rounded-xl bg-slate-50 p-4"><summary class="font-semibold cursor-pointer">Vocês fornecem garantia?</summary><p class="mt-2 text-sm text-slate-600">Sim, garantia escrita e peças originais.</p></details>
+        <details class="group rounded-xl bg-slate-50 p-4"><summary class="font-semibold cursor-pointer">Quais formas de pagamento?</summary><p class="mt-2 text-sm text-slate-600">Pix, débito, crédito (parcelamos) e dinheiro.</p></details>
       </div>
     </article>
 
     <aside class="lg:col-span-1">
-      <div class="rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-xl ring-1 ring-black/5 sticky top-24">
+      <div class="rounded-2xl p-6 bg-white shadow-xl ring-1 ring-black/5 sticky top-24">
         <h4 class="text-xl font-semibold mb-2">Fale agora no WhatsApp</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Envie fotos do aparelho e receba um orçamento rápido.</p>
-        <a href="https://wa.me/5551999999999?text=Olá!%20Quero%20um%20orçamento%20para%20Micro-ondas."
-           class="w-full inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-xl shadow">
-          <img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt="WhatsApp"/> WhatsApp
+        <p class="text-sm text-slate-600 mb-4">Envie fotos do aparelho e receba um orçamento rápido.</p>
+        <a href="https://wa.me/5551999999999?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20Micro-ondas." class="w-full inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-xl shadow">
+          <img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt=""> WhatsApp
         </a>
-        <ul class="mt-6 text-sm space-y-2 text-gray-600 dark:text-gray-300">
-          <li>⏱️ Resposta média: minutos</li>
-          <li>🧾 NF e garantia</li>
-          <li>📍 Porto Alegre e região</li>
-        </ul>
+        <ul class="mt-6 text-sm space-y-2 text-slate-600"><li>⏱️ Resposta média: minutos</li><li>🧾 NF e garantia</li><li>📍 Porto Alegre e região</li></ul>
       </div>
     </aside>
   </section>
 </main>
 
-<footer class="bg-gray-100 dark:bg-gray-800 py-10"><div class="container mx-auto px-4 text-sm">© <span id="year"></span> Refrigeração Profissional.</div></footer>
+<footer class="relative bg-[#f1f5f9] text-slate-700 py-10 border-t border-slate-200 shadow-inner">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+    <p class="text-sm">© <span id="year"></span> <span class="font-semibold text-slate-900">Refrigeração Profissional</span>. Todos os direitos reservados.</p>
+    <div class="flex items-center gap-6">
+      <a href="../index.html#contato" class="hover:text-primary font-medium">Contato</a>
+      <a href="https://wa.me/5551999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-medium shadow-md"><img src="../assets/icons/whatsapp.svg" class="w-5 h-5" alt=""> WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
