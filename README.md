@@ -1,187 +1,203 @@
-# Refrigeração Profissional — Catálogo/One‑Page
+# ❄️ Refrigeração Profissional
 
-Site estático para divulgação de serviços de assistência técnica em refrigeração (Porto Alegre e região).  
-Feito com **HTML + Tailwind via CDN + JS vanilla** e sem build tools. Ideal para hospedar em qualquer serviço de _static hosting_.
-
----
-
-## ✅ O que este repositório contém
-
-- Página principal (`index.html`) com:
-  - Hero + CTA único (WhatsApp)
-  - Seção “Nossos Serviços” com cards
-  - Seção “Por que escolher a gente?”
-  - Depoimentos
-  - Bloco de contato + mapa
-  - Header com **menu mobile (drawer)**
-- Páginas de serviços em `/servicos/`
-- Página “Sobre” (opcional)
-- Logos originais (icon + wordmark) e favicon em SVG
-- PWA básico via `manifest.json`
-- Script `assets/js/main.js` para:
-  - efeito de sombra do header ao rolar
-  - abertura/fechamento do drawer mobile
-  - destaque de links do menu por seção
-  - envio simulado de formulário legado (se existir)
+Catálogo institucional moderno e responsivo, desenvolvido para divulgar os serviços de assistência técnica da **Refrigeração Profissional**, empresa especializada em **refrigeração doméstica e comercial** na região de **Porto Alegre (RS)**.
 
 ---
 
-## 🌳 Estrutura de pastas (compatível com o seu projeto)
+## 🧭 Visão Geral
+
+O projeto foi construído como um **site estático**, leve e direto, priorizando:
+- Navegação simples e responsiva;
+- Comunicação clara dos serviços;
+- Conversão rápida via **botão de WhatsApp**;
+- Design limpo, em tons de azul e creme, reforçando a ideia de “frio e confiança”.
+
+---
+
+## 🧩 Páginas e Estrutura
 
 ```
-assets/
-  css/
-    style.css
-  icons/
-    snowflake.svg
-    whatsapp.svg
-  img/
-    banner.png
-    geladeira.jpg
-    lavadora.jpg
-    microondas.jpg
-    ar-condicionado.jpg
-    servicos/              # (imagens extras, se precisar)
-  js/
-    main.js
-  logo/
-    favicon.svg
-    refrigpro-icon.svg
-    refrigpro-wordmark.svg
-servicos/
-  ar-condicionado.html
-  geladeiras.html
-  lavadoras.html
-  micro-ondas.html
-index.html
-sobre.html               # (se estiver usando)
-manifest.json
+📦 refrig-pro
+ ┣ 📂 assets
+ ┃ ┣ 📂 css
+ ┃ ┃ ┗ style.css
+ ┃ ┣ 📂 icons
+ ┃ ┃ ┣ snowflake.svg
+ ┃ ┃ ┗ whatsapp.svg
+ ┃ ┣ 📂 img
+ ┃ ┃ ┣ banner.png
+ ┃ ┃ ┣ geladeira.jpg
+ ┃ ┃ ┣ lavadora.jpg
+ ┃ ┃ ┣ microondas.jpg
+ ┃ ┃ ┣ ar-condicionado.jpg
+ ┃ ┃ ┗ 📂 servicos
+ ┃ ┣ 📂 js
+ ┃ ┃ ┗ main.js
+ ┃ ┗ 📂 logo
+ ┃   ┣ favicon.svg
+ ┃   ┣ refrigpro-icon.svg
+ ┃   ┗ refrigpro-wordmark.svg
+ ┣ 📂 servicos
+ ┃ ┣ ar-condicionado.html
+ ┃ ┣ geladeiras.html
+ ┃ ┣ lavadoras.html
+ ┃ ┗ micro-ondas.html
+ ┣ index.html
+ ┣ sobre.html
+ ┣ manifest.json
+ ┗ README.md
 ```
 
-> **Observação:** Se algum arquivo/pasta não existir no seu ambiente, basta criar ou ajustar os caminhos conforme acima.
+---
+
+## 🧊 Destaques do Projeto
+
+### 🏠 Página inicial (`index.html`)
+- **Hero** com CTA direto para WhatsApp.  
+- **Seção de serviços** (cards com hover e imagens).  
+- **Diferenciais** (“Por que escolher a gente?”).  
+- **Depoimentos animados** (AOS).  
+- **Contato com mapa e botão de orçamento**.  
+- **Header fixo com menu mobile (drawer lateral)**.  
+- **Footer leve e elegante**, com botão WhatsApp integrado.
+
+### 📖 Página “Sobre”
+- Missão, visão e valores.  
+- Blocos com efeito *glass* igual ao do index.  
+- CTA para contato via WhatsApp.  
+
+### 🧰 Outras páginas
+- Páginas dedicadas em `/servicos/` para cada tipo de atendimento.  
+- Manifesto PWA e ícones SVG otimizados.
 
 ---
 
-## ▶️ Como rodar localmente
+## 🧠 Tecnologias Utilizadas
 
-Não requer nenhuma instalação especial. Abra o arquivo `index.html` no navegador.
-- Dica: com VS Code, use a extensão **Live Server** para _reload_ automático.
+| Tecnologia | Função |
+|-------------|--------|
+| **HTML5** | Estrutura semântica do site |
+| **TailwindCSS (CDN)** | Estilização rápida e responsiva |
+| **JavaScript Vanilla** | Interações (menu, scroll, destaque de links) |
+| **AOS.js** | Animações suaves ao rolar a página |
+| **SVGs** | Ícones otimizados e escaláveis |
+| **JSON-LD Schema** | SEO LocalBusiness configurado |
 
 ---
 
-## 🧩 Personalização rápida
+## ⚙️ Funcionalidades do `main.js`
 
-### 1) Atualizar WhatsApp e telefone
-Procure por `wa.me/5551999999999` e substitua pelo seu número real no formato internacional.  
-Ex.: `https://wa.me/5551999123456?text=Olá!%20Quero%20um%20orçamento.`
+✅ Atualização automática do ano no footer  
+✅ Sombra dinâmica no header ao rolar  
+✅ Menu mobile (abre/fecha com overlay escuro e trava de scroll)  
+✅ Destaque automático de seção ativa no menu  
+✅ Simulação de envio do formulário (modo demonstração)  
 
-O telefone exibido no bloco de informações fica em `index.html` (seção **Informações**) e também pode estar na página **sobre.html**.
+---
 
-### 2) Cores da marca
-As cores primárias estão configuradas no **Tailwind inline config** dentro do `<head>` do `index.html`:
+## 🎨 Personalização Rápida
+
+### 🟢 1. Atualizar o WhatsApp
+Procure por `wa.me/5551999999999` e substitua pelo seu número real.  
+Exemplo:
+```
+https://wa.me/5551999123456?text=Olá!%20Quero%20um%20orçamento.
+```
+
+### 💙 2. Alterar cores da marca
+As cores principais estão dentro do `<script>` no `<head>` do `index.html`:
+
 ```js
 tailwind.config = {
   theme: { extend: {
     colors: {
-      primary: "#0ea5e9",   // azul (sky-500)
-      secondary: "#14b8a6", // teal-500
+      primary: "#0ea5e9",   // Azul principal
+      secondary: "#14b8a6", // Verde-água
       surface: { soft:"#eef2f6", ring:"#e2e8f0" },
       cream: { DEFAULT:"#FFF4DC", soft:"#FFF9EF", bold:"#FFE8B3" }
     }
   }}
 }
 ```
-Altere esses hexadecimais para ajustar o visual.
 
-### 3) Textos de SEO e Schema
-No `<head>` do `index.html` há:
-- `<title>` e `<meta name="description">`
-- JSON‑LD com `@type: LocalBusiness`  
-Atualize **nome, telefone, cidade** e **URL**.
-
-### 4) Serviços
-As páginas em `/servicos` possuem o conteúdo por aparelho. Altere conforme a sua oferta.
+### 🖼️ 3. Trocar logo e favicon
+| Tipo | Caminho |
+|------|----------|
+| Ícone quadrado | `assets/logo/refrigpro-icon.svg` |
+| Logo wordmark | `assets/logo/refrigpro-wordmark.svg` |
+| Favicon | `assets/logo/favicon.svg` |
 
 ---
 
-## 📱 Menu mobile (drawer)
+## 📱 Menu Mobile (Drawer)
 
-O menu lateral usa estes IDs e classes (importante para que não “vaze” por trás do conteúdo):
-- `#mobileDrawer` → **cobertura total** com `z-[80]`
-- `#drawerOverlay` → backdrop opaco (`bg-black/60`)
-- `#drawerPanel` → painel que desliza (tem `translateX(100%)` por padrão)
-- `#openMenu` e `#closeMenu` → botões
+O menu lateral é controlado pelo `main.js` e composto por:
 
-O JS em `assets/js/main.js` controla:
-- Abertura/fechamento com **trava de scroll** (`body { overflow: hidden }`)
-- Troca do ícone “hambúrguer/fechar”
-- Esconde o drawer apenas **após** a animação terminar (300ms)
+| ID | Função |
+|----|---------|
+| `#mobileDrawer` | Container geral com `z-[80]` |
+| `#drawerOverlay` | Fundo escuro com opacidade (`bg-black/60`) |
+| `#drawerPanel` | Painel branco que desliza lateralmente |
+| `#openMenu` | Botão hambúrguer |
+| `#closeMenu` | Botão de fechar (X) |
 
-Se o drawer ficar “transparente” ou atrás do conteúdo, confira:
-- `z-index` maior que o do header/hero `z-50` → usamos `z-[80]` no drawer
-- o overlay é um **button** cobrindo `inset-0`
-- o painel tem `position: absolute` e está dentro do `#mobileDrawer`
+**Comportamentos automáticos:**
+- Fecha ao clicar fora do painel.  
+- Bloqueia o scroll da página enquanto aberto.  
+- Anima com transição suave (300ms).  
+- Fecha com tecla `ESC`.  
 
 ---
 
-## 🖼️ Prints do projeto
+## 🧪 Testes Antes de Publicar
 
-Crie a pasta `docs/screenshots/` e adicione imagens como:
+✔️ Todos os links de WhatsApp funcionam  
+✔️ Menu mobile abre e fecha sem “vazar” atrás do conteúdo  
+✔️ Imagens otimizadas (tente 360 px no celular)  
+✔️ SEO básico: título e descrição aparecem corretos  
+✔️ Favicon visível no navegador e no celular  
+
+---
+
+## 🚀 Como Rodar
+
+Sem dependências. Basta abrir o arquivo `index.html`:
+
+```bash
+# ou com Live Server no VS Code
+Alt + L + O
 ```
-docs/screenshots/01-hero.png
-docs/screenshots/02-servicos.png
-docs/screenshots/03-drawer-mobile.png
-```
-Depois, referencie no README:
-```md
-![Hero](docs/screenshots/01-hero.png)
-![Serviços](docs/screenshots/02-servicos.png)
-![Menu Mobile](docs/screenshots/03-drawer-mobile.png)
-```
+
+### Deploys recomendados:
+- **Vercel / Netlify** → arraste o projeto  
+- **GitHub Pages** → publique na branch `main`  
+- **CPanel** → envie os arquivos para `public_html`
 
 ---
 
-## 🚀 Deploy
+## 🖼️ Prints do Projeto
 
-Qualquer hospedagem estática serve:
-- **GitHub Pages**: publique a raiz do projeto.  
-- **Vercel/Netlify**: arraste a pasta ou conecte o repositório (build = none).  
-- **CPanel**: suba os arquivos para `public_html`.
-
-> Se usar domínio próprio, lembre-se de atualizar a `url` do JSON‑LD e conferir o **favicon**.
-
----
-
-## 🔍 Boas práticas incluídas
-
-- **AOS** para animações suaves (pode desabilitar removendo os `<script>`/`<link>`).
-- Títulos e `meta description` configuráveis por página.
-- `manifest.json` para ícone em atalho e cor do tema móvel.
-- Sem dependências de build: simples e direto.
+> Adicione suas imagens dentro de `docs/screenshots/`:
+>
+> ```
+> docs/screenshots/01-hero.png
+> docs/screenshots/02-servicos.png
+> docs/screenshots/03-menu-mobile.png
+> ```
+>
+> E insira aqui:
+>
+> ![Hero](docs/screenshots/01-hero.png)
+> ![Serviços](docs/screenshots/02-servicos.png)
+> ![Menu Mobile](docs/screenshots/03-menu-mobile.png)
 
 ---
 
-## 🧪 Testes rápidos antes de publicar
+## 🧾 Créditos e Licença
 
-1. Todos os links de **WhatsApp** funcionam?  
-2. O número de telefone está correto?  
-3. O menu mobile abre/fecha sem “vazar” por trás do conteúdo?  
-4. As imagens carregam bem no celular (tente 360px)?  
-5. SEO básico: título e descrição coerentes na aba do navegador.
+Criado com 💙 por **Debuguei Studio**  
+Design, estrutura e interação por *GPT-5 + direção criativa Debuguei*.  
+Uso livre e personalizável para catálogos institucionais.
 
----
-
-## 📄 Licença
-
-Uso livre para este projeto. Se reutilizar em outro cliente, recomendo manter ou adaptar os créditos visuais.
-
----
-
-## 👋 Suporte/ajustes
-
-Se quiser, crie um _issue_ descrevendo:
-- qual seção quer alterar (ex.: “Serviços → card 3”);
-- o texto/arte nova;
-- screenshots ou referência.
-
-Isso acelera a entrega e evita ruído entre layout e conteúdo.
+© 2025 — **Refrigeração Profissional**. Todos os direitos reservados.  
+🧊 *Catálogo web simples, rápido e eficaz.*
