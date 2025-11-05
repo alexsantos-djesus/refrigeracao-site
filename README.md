@@ -194,6 +194,3 @@ Aqui estão algumas capturas de tela mostrando o layout do site em **versão des
 
 Criado com 💙 por **Debuguei**  
 Uso livre e personalizável para catálogos institucionais.
-
-© 2025 — **Refrigeração Profissional**. Todos os direitos reservados.  
-🧊 *Catálogo web simples, rápido e eficaz.*
